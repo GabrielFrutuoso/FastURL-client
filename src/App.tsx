@@ -8,7 +8,7 @@ function App() {
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
-    api.post(`/url/save?url=${event.target.original_url.value}`).then((response) => {
+    api.post(`url/save?url=${event.target.original_url.value}`).then((response) => {
       setShortUrl(`https://fasturl-api.onrender.com/url/redirect?url=${response.data.short_url}`);
     });
   }
